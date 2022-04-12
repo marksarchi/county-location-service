@@ -1,0 +1,24 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <changeSet id="3" author="Mark Sarchi">
+        <sql>
+            create table counties
+            (
+                id                 uuid         not null primary key,
+                creation_date      timestamp,
+                last_modified_date timestamp,
+                code               varchar(255) not null unique,
+                name               varchar(255) not null unique,
+                polygon            geometry
+            );
+        </sql>
+    </changeSet>
+
+
+
+
+</databaseChangeLog>

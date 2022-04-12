@@ -1,0 +1,32 @@
+server:
+  port: 9098
+logging:
+  level:
+    liquibase: INFO
+spring:
+  datasource:
+    username: postgres
+    url: jdbc:postgresql://localhost:5433/zoning
+    password: marcus254
+    driver-class-name: org.postgresql.Driver
+
+  liquibase:
+    change-log: db/changelog/changelog-master.xml
+    enabled: true
+
+  jpa:
+    database-platform: org.hibernate.spatial.dialect.postgis.PostgisDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+county-info:
+  service:
+    url: http://localhost:8181/information
+
+
+
+
+
+
+

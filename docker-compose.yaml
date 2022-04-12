@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  Location-app:
+    container_name: Location-app
+    image: postgis/postgis:12-2.5-alpine
+    environment:
+      #POSTGRES_DB: po
+      #POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      # POSTGRES_ROOT_PASSWORD: "rootpwd"
+    ports:
+      - 5433:5433
+    volumes:
+      - ./data:/var/lib/postgresql/data
+
+
