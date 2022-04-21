@@ -61,6 +61,9 @@ test{
     // exclude "**/*IT*"
     useJUnitPlatform()
 }
+//test.onlyIf {
+//    !project.hasProperty("testit")
+//}
 
 jacocoTestReport{
     dependsOn test
